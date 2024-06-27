@@ -1,6 +1,6 @@
 #!/bin/bash -xe
-cluster_name=${1:?}
-external_domain=${2:?}
+export cluster_name=${1:?}
+export external_domain=${2:?}
 
 mkdir -p tmp
 
