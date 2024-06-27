@@ -13,8 +13,8 @@ metadata:
   - service.kubernetes.io/load-balancer-cleanup
   labels:
     app: router
-    router: router-{{cluster_name}}
-  name: router-{{cluster_name}}
+    router: router-${cluster_name}
+  name: router-${cluster_name}
   namespace: openshift-ingress
 spec:
   type: LoadBalancer
@@ -38,5 +38,5 @@ spec:
     port: 443
     targetPort: https
   selector:
-    ingresscontroller.operator.openshift.io/deployment-ingresscontroller: {{cluster_name}}
+    ingresscontroller.operator.openshift.io/deployment-ingresscontroller: "${cluster_name}"
   sessionAffinity: None
